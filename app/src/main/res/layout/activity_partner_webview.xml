@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.auro.application.home.presentation.viewmodel.AppLanguageViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".home.presentation.view.activity.AppLanguageActivity">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:padding="@dimen/_5ssp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/backButton"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_36sdp"
+                android:src="@drawable/login_back_button"
+                android:visibility="visible"
+                android:layout_centerVertical="true"
+
+             android:layout_alignParentStart="true" />
+            <ImageView
+                android:id="@+id/auro_scholar_logo"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:adjustViewBounds="true"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:src="@drawable/ic_auro"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+               android:layout_toRightOf="@id/backButton" />
+
+          <TextView
+              android:id="@+id/txtname"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_toRightOf="@id/auro_scholar_logo"
+              android:text="Hi"
+              android:textStyle="bold"
+
+              android:layout_centerVertical="true"
+              android:textSize="@dimen/_14sdp"
+              android:layout_marginLeft="@dimen/_12sdp"></TextView>
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+             <WebView
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:id="@+id/webpartner"></WebView>
+            </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+</layout>

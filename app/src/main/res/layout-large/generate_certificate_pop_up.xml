@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_16sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="@dimen/_8sdp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_certbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/_16sdp"
+                    android:background="@drawable/popcertificate_bg">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/certificate4x_img"></ImageView>
+                </RelativeLayout>
+
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:layout_below="@+id/layout_certbg"
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="Congratulations!"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp"
+                    app:Font="Poppins-Medium.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Download and View Certificate"
+                    android:textColor="#ADADAD"
+                    android:textSize="@dimen/_14sdp"
+                    app:Font="Poppins-Regular.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_btn"
+                    android:layout_below="@+id/tv_message"
+                    android:layout_width="match_parent"
+                    android:padding="@dimen/_18sdp"
+                    android:layout_height="wrap_content">
+
+                <RelativeLayout
+                        android:id="@+id/rel_view"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_34sdp"
+                    android:gravity="center"
+                    android:layout_alignParentLeft="true"
+                        android:background="@drawable/certificate_view_bg">
+                        <com.auro.application.core.util.uiwidget.RPTextView
+                            android:id="@+id/btn_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+
+                            android:padding="@dimen/_8sdp"
+                            android:text="View"
+                            android:textAllCaps="false"
+                            android:textColor="#1492EC"
+                            android:textSize="@dimen/_12sdp"
+                            app:Font="Poppins-Regular.ttf" />
+                    <ImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:src="@drawable/view_icon"
+                        android:layout_centerVertical="true"
+
+                        android:layout_toRightOf="@+id/btn_view"
+                        app:tint="#1492EC"></ImageView>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_34sdp"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:background="@drawable/certificate_download_bg">
+                        <com.auro.application.core.util.uiwidget.RPTextView
+                            android:id="@+id/btn_download"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                             android:gravity="center"
+
+
+                            android:padding="@dimen/_8sdp"
+
+                            android:text="Download"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12sdp"
+                            app:Font="Poppins-Regular.ttf" />
+                        <ImageView
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:src="@drawable/download_icon"
+                            android:layout_centerVertical="true"
+
+                            android:layout_toRightOf="@+id/btn_download"
+                            app:tint="@color/white"></ImageView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:id="@+id/tv_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_btn"
+                    android:gravity="center"
+                  android:padding="@dimen/_16sdp"
+                    android:text="No, I will do Later"
+                    android:textColor="#888686"
+                    android:textSize="@dimen/_14sdp"
+                    app:Font="Poppins-Regular.ttf"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/layout_btn" />
+
+
+
+
+
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

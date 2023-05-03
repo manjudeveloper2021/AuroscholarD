@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+        android:id="@+id/mainParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtrefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_5ssp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:layout_marginEnd="@dimen/_5ssp"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:padding="@dimen/_5ssp"
+            android:text="Refresh"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_16ssp"></androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvacceptbuddy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtrefresh"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:visibility="visible"></androidx.recyclerview.widget.RecyclerView>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnaddbuddyinvite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+         android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:visibility="visible"
+            android:background="@drawable/btn_invite"
+            android:text="Add New Buddies"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"></androidx.appcompat.widget.AppCompatButton>
+</RelativeLayout>
+
+</layout>

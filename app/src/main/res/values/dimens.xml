@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--    <dimen name="design_bottom_navigation_height">86dp</dimen>
+        <dimen name="design_bottom_Navigation">56dp</dimen>-->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="seekbar_thumb_width">25dp</dimen>
+</resources>

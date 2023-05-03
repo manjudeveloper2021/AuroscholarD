@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".teacher.presentation.view.fragment.InformationDashboardFragment">
+        <RelativeLayout
+            android:id="@+id/mainParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".home.presentation.view.fragment.MainQuizHomeFragment"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:id="@+id/imgnext"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_back"
+                app:tint="@color/colorPrimary" />
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/studentImage"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:layout_weight=".1"
+                        android:src="@drawable/account_circle"/>
+
+                    <LinearLayout
+                        android:id="@+id/layout_studentpassport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/studentImage"
+                        android:layout_marginLeft="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="vertical">
+
+                        <com.auro.application.core.util.uiwidget.RPTextView
+                            android:id="@+id/tvStudentName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            android:layout_gravity="left"
+                            android:visibility="visible"
+                            android:text="Student Name"
+                            app:Font="ArticulatCF-Medium.otf"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <com.auro.application.core.util.uiwidget.RPTextView
+                                android:id="@+id/txtkycstatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_10sdp"
+                                android:layout_gravity="left"
+                                android:visibility="visible"
+                                android:text="KYC Status : "
+                                app:Font="ArticulatCF-Medium.otf"/>
+                            <com.auro.application.core.util.uiwidget.RPTextView
+                                android:id="@+id/tvStudentScore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/blue_color"
+                                android:textSize="@dimen/_10sdp"
+                                android:layout_gravity="left"
+                                android:visibility="visible"
+                                android:text="Approved"
+                                app:Font="ArticulatCF-Medium.otf"/>
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout_studentpassport"
+                        android:layout_marginStart="@dimen/_20ssp"
+                        android:layout_marginTop="@dimen/_28ssp"
+                        android:layout_marginEnd="@dimen/_20ssp"
+                        android:layout_marginBottom="@dimen/_20ssp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tlmonth"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:textColorHint="@color/auro_border_blue"
+
+                            android:textSize="@dimen/_10sdp"
+                            app:endIconMode="none">
+
+
+                            <AutoCompleteTextView
+                                android:id="@+id/etmonth"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:dropDownHeight="wrap_content"
+                                android:drawableRight="@drawable/ic_user_drop_down"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:gravity="left"
+                                android:editable="false"
+                                android:background="@drawable/sppiner_boader"
+                                android:maxLines="1"
+                                android:longClickable="false"
+                                android:paddingEnd="@dimen/_20sdp"
+                                android:textColor="@color/black"
+
+                                />
+
+
+                            <!--            <AutoCompleteTextView-->
+                            <!--                android:id="@+id/etmonth"-->
+                            <!--                android:layout_width="match_parent"-->
+                            <!--                android:layout_height="wrap_content"-->
+                            <!--                android:background="@drawable/sppiner_boader"-->
+                            <!--                android:drawableRight="@drawable/ic_user_drop_down"-->
+                            <!--                android:dropDownHeight="wrap_content"-->
+                            <!--                android:focusable="false"-->
+                            <!--                android:gravity="left"-->
+                            <!--                android:longClickable="false"-->
+                            <!--                android:maxLines="1"-->
+                            <!--                android:padding="@dimen/_10sdp"-->
+                            <!--                android:text="Month"-->
+                            <!--                android:textColor="@color/black"-->
+                            <!--                android:textSize="@dimen/_10sdp" />-->
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tlsubject"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColorHint="@color/auro_border_blue"
+
+                            android:textSize="@dimen/_10sdp"
+                            app:endIconMode="none">
+
+
+                            <AutoCompleteTextView
+                                android:id="@+id/etsubject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/sppiner_boader"
+                                android:dropDownHeight="wrap_content"
+                                android:drawableRight="@drawable/ic_user_drop_down"
+                                android:drawablePadding="@dimen/_10sdp"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:editable="false"
+                                android:longClickable="false"
+                                android:paddingEnd="@dimen/_20sdp"
+                                android:textColor="@color/black"
+
+                                />
+
+
+                            <!--            <AutoCompleteTextView-->
+                            <!--                android:id="@+id/etsubject"-->
+                            <!--                android:layout_width="match_parent"-->
+                            <!--                android:layout_height="wrap_content"-->
+                            <!--                android:background="@drawable/sppiner_boader"-->
+                            <!--                android:drawableRight="@drawable/ic_user_drop_down"-->
+                            <!--                android:dropDownHeight="wrap_content"-->
+                            <!--                android:focusable="false"-->
+                            <!--                android:gravity="left"-->
+                            <!--                android:longClickable="false"-->
+                            <!--                android:maxLines="1"-->
+                            <!--                android:padding="@dimen/_10sdp"-->
+                            <!--                android:text="Subject"-->
+                            <!--                android:textColor="@color/black"-->
+                            <!--                android:textSize="@dimen/_10sdp" />-->
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/month_parent_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_bg_dark_blue">
+
+                                <com.auro.application.core.util.uiwidget.RPTextView
+                                    android:id="@+id/month_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    app:Font="Poppins-Regular.ttf"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_alignRight="@+id/month_title"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:src="@drawable/ic_expand_more" />
+
+                            </RelativeLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/month_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/button_bg_dark_blue"
+                                android:outlineSpotShadowColor="@color/dark_blue"
+                                android:popupBackground="@color/dark_blue"
+                                android:visibility="invisible"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/subject_parent_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:layout_weight="0.9"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/button_bg_dark_blue">
+
+                                <com.auro.application.core.util.uiwidget.RPTextView
+                                    android:id="@+id/subject_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_10sdp"
+                                    app:Font="Poppins-Regular.ttf"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/_20sdp"
+                                    android:layout_height="@dimen/_20sdp"
+                                    android:layout_alignRight="@+id/subject_title"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:src="@drawable/ic_expand_more"
+                                    app:layout_constraintStart_toEndOf="@+id/subject_title" />
+
+                            </RelativeLayout>
+
+
+                            <androidx.appcompat.widget.AppCompatSpinner
+                                android:id="@+id/subject_spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="@dimen/_5sdp"
+
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:background="@drawable/button_bg_dark_blue"
+                                android:foregroundTint="@color/white"
+                                android:outlineSpotShadowColor="@color/dark_blue"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@color/auro_start_greay"
+                    android:layout_below="@+id/mainLayout"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <com.auro.application.core.util.uiwidget.RPTextView
+                        android:id="@+id/tvScholarship"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_alignParentStart="true"
+                        android:visibility="visible"
+                        android:text="Total Scholarship Disbursal"
+                        app:Font="ArticulatCF-Medium.otf"/>
+
+                    <com.auro.application.core.util.uiwidget.RPTextView
+                        android:id="@+id/tvscholarshipvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_110sdp"
+                        android:text="₹50"
+                        app:Font="ArticulatCF-Medium.otf"/>
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <com.auro.application.core.util.uiwidget.RPTextView
+                        android:id="@+id/tvquiz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_alignParentStart="true"
+                        android:visibility="visible"
+                        android:text="Total Quiz Attempted"
+                        app:Font="ArticulatCF-Medium.otf"/>
+
+                    <com.auro.application.core.util.uiwidget.RPTextView
+                        android:id="@+id/tvquizvalue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="visible"
+                        android:layout_marginLeft="@dimen/_110sdp"
+                        android:text="50"
+                        app:Font="ArticulatCF-Medium.otf"/>
+
+
+                </RelativeLayout>
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:text="@string/message"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    app:Font="ArticulatCF-Regular.otf"
+                    android:background="@drawable/message_send_box"/>
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/viewlast"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:background="@color/auro_start_greay"
+                android:layout_below="@+id/mainLayout"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvscholarshipdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewlast">
+            </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

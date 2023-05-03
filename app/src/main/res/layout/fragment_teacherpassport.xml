@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".teacher.presentation.view.fragment.InformationDashboardFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <RelativeLayout
+            android:id="@+id/mainParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            tools:context=".home.presentation.view.fragment.MainQuizHomeFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constantLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+
+
+                <ImageView
+                    android:id="@+id/auro_scholar_logo"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/ic_auro_scholar_logo"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                <LinearLayout
+                    android:id="@+id/language_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewNotification"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_notification"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageViewLanguage"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:src="@drawable/ic_language_google" />
+
+                    <ImageView
+                        android:id="@+id/imageViewLanguageMenu"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/triangle" />
+
+
+                </LinearLayout>
+<RelativeLayout
+    android:id="@+id/rel_search"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_12sdp"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/imgnext"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="right"
+        android:layout_marginStart="@dimen/_10sdp"
+
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/colorPrimary" />
+    <EditText
+
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_36ssp"
+        android:background="@drawable/sppiner_boader"
+        android:drawableLeft="@drawable/places_ic_search"
+        android:hint="search student"
+        android:layout_below="@+id/imgnext"
+
+        android:id="@+id/etsearchstudent"></EditText>
+    <Button
+        android:id="@+id/btnsearch"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36ssp"
+        android:layout_toRightOf="@+id/etsearchstudent"
+        android:text="Search"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_8ssp"
+        android:background="#4f69fa"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:textColor="@color/white"></Button>
+</RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mainHeadtop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rel_search">
+
+                    <LinearLayout
+                        android:id="@+id/layout_pass"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_50sdp"
+                        android:orientation="vertical"
+                        >
+
+                        <com.auro.application.core.util.uiwidget.RPTextView
+                            android:id="@+id/RPmyClassRoom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:text="@string/student_passport"
+                            android:textColor="@color/dark_magenta"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="visible"
+                            app:Font="ArticulatCF-Regular.otf"
+                            app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_btn_blue_round"
+                            android:orientation="horizontal">
+                            <com.auro.application.core.util.uiwidget.RPTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="Students :"
+                                android:padding="@dimen/_5ssp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8sdp"
+                                android:visibility="visible"
+                                app:Font="ArticulatCF-Medium.otf"
+                                app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+                                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+                            <com.auro.application.core.util.uiwidget.RPTextView
+                                android:id="@+id/RPDetailInformation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_2sdp"
+                                android:text="0"
+                                android:padding="@dimen/_5ssp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8sdp"
+                                android:visibility="visible"
+                                app:Font="ArticulatCF-Medium.otf"
+                                app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+                                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+                        </LinearLayout>
+
+
+
+
+
+                    </LinearLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tlgrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/layout_pass"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:textColorHint="@color/auro_border_blue"
+                        app:endIconMode="none">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/etgrade"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/sppiner_boader"
+                            android:drawableRight="@drawable/ic_user_drop_down"
+                            android:textSize="@dimen/_10sdp"
+                            android:text="Grade"
+                            android:dropDownHeight="wrap_content"
+                            android:focusable="false"
+                            android:longClickable="false"
+                            android:gravity="left"
+                            android:maxLines="1"
+                            android:padding="@dimen/_10sdp"
+                            android:textColor="@color/black" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <LinearLayout
+                        android:id="@+id/whats_app_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_gravity="center_horizontal"
+                            android:src="@drawable/ic_whatsapp_svg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/txtShareWithOther"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/share_with_other"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_10sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layout_hint" />
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/swipeCons"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/mainHeadtop"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/auro_color_grey" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/seprartion_color">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_passport_student"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:clipToPadding="true" />
+
+                            <com.auro.application.core.util.uiwidget.RPTextView
+                                android:id="@+id/student_list_message"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:text="No Students Data"
+                                android:textColor="@color/auro_text_grey"
+                                android:textSize="@dimen/_12sdp"
+                                android:visibility="gone"
+                                app:Font="ArticulatCF-Regular.otf" />
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <!-- </RelativeLayout>-->
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/errorConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+
+                android:id="@+id/errorLayout"
+                layout="@layout/error_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_my_classroom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+                layout="@layout/full_screen_progress_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <include
+            android:id="@+id/progressbar"
+            layout="@layout/full_screen_progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+

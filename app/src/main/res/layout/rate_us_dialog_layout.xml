@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ratebox">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ratebox">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ratebox"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ratebox2"
+                android:backgroundTint="@color/lightGrey"
+                android:text="Your opinion matters to us!"
+                android:gravity="center"
+                android:padding="10sp"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+
+            <ImageView
+                android:id="@+id/ratingImage"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_auro_scholar_logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10sp"
+                android:text="Recommend us to others by \nrating on Play Store"
+                android:textColor="@color/rate_box"
+                android:textSize="16dp"
+                tools:ignore="TextSizeCheck" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+<RatingBar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:numStars="5"
+    android:rating="0"
+    android:clickable="false"
+    android:progressDrawable="@drawable/star"
+    android:progressTint="@color/yellowdark"></RatingBar>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue_color"
+                    android:padding="10sp"
+                    android:id="@+id/rateNowBtn"
+                    android:text="Rate Now"
+                    android:clickable="true"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lateBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:text="May be later"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/rate_box" />
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

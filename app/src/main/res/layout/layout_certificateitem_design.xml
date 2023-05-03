@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/layout_course"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_8sdp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+         android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="@+id/imageView5">
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:background="@drawable/courselist_item_bg"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rel_head"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_8ssp"
+                android:background="@drawable/certificate_star"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/module_img"
+                    android:layout_width="@dimen/_45sdp"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_alignParentLeft="true"
+
+                    android:src="@drawable/cet_img"></ImageView>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/head_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:layout_below="@id/module_img"
+                    android:text="Course name">
+                </androidx.appcompat.widget.AppCompatTextView>
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/module_img"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtstatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View"
+                        android:fontFamily="@font/poppins_regular"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/auro_more_dark_grey"
+                        android:textSize="@dimen/_12sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+                    <ImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:src="@drawable/view_icon"
+                        android:layout_marginTop="@dimen/_3ssp"
+                        android:layout_toLeftOf="@+id/txtstatus"
+                        android:layout_marginRight="@dimen/_5ssp"
+                        app:tint="#929191"></ImageView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtpercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/txtstatus"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="@dimen/_46ssp"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/rel_progress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txtstatus"
+                        android:visibility="gone"
+                        android:layout_alignParentRight="true">
+
+
+
+                    </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/imgnext"
+                        android:layout_toRightOf="@+id/txtstatus"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/_8ssp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/next_arrow"></ImageView>
+                </RelativeLayout>
+            </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10ssp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_3ssp"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/rel_module"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_2ssp"
+                        app:tint="@color/blue_color"
+                        android:src="@drawable/download_icon"></ImageView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtdownload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Download"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginLeft="@dimen/_5ssp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textSize="@dimen/_10sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_3ssp"
+                        app:tint="@color/blue_color"
+                        android:src="@drawable/share_icon"></ImageView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtshare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="@dimen/_5ssp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:textSize="@dimen/_10sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</layout>

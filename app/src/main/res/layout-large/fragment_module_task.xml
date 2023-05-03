@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   >
+                    <RelativeLayout
+                        android:id="@+id/relative_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:background="@drawable/module_scr_bg">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/auro_logo"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_20sdp"></ImageView>
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/relative_top"
+                        android:layout_marginTop="-30dp"
+                        android:background="@drawable/module_task_bg">
+                        <ScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_height="fill_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:id="@+id/relative_module"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/txtmodule"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="Module"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"></TextView>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_modulenew"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txtmodule"
+                                android:layout_marginBottom="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_5sdp"></androidx.recyclerview.widget.RecyclerView>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/relative_task"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/relative_module"
+                            android:layout_marginStart="@dimen/_10sdp"
+
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/txttitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="Task"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"></TextView>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_module"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txttitle"
+                                android:layout_marginBottom="@dimen/_20sdp"
+                                android:layout_marginTop="@dimen/_5sdp"></androidx.recyclerview.widget.RecyclerView>
+
+                        </RelativeLayout>
+                        </RelativeLayout>
+                        </ScrollView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_next"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+
+                        android:padding="@dimen/_6sdp"
+                        android:visibility="gone"
+                        android:background="@drawable/gradient_module_bg">
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click To Start Next Module"
+    android:textColor="@color/white"
+    android:layout_centerVertical="true"
+    android:textSize="@dimen/_12ssp"></androidx.appcompat.widget.AppCompatTextView>
+                  <Button
+                      android:id="@+id/btnnext"
+                      android:layout_width="@dimen/_60sdp"
+                      android:layout_height="@dimen/_32sdp"
+                      android:text="NEXT"
+                      android:textAllCaps="false"
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/_10sdp"
+                      android:padding="@dimen/_5ssp"
+                      android:background="#2AB6FE"
+                      android:layout_alignParentRight="true"></Button>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/errorConstraint"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+
+                android:id="@+id/errorLayout"
+                layout="@layout/error_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="@dimen/_2sdp"
+            android:indeterminateDrawable="@drawable/circular_progress"
+            android:innerRadiusRatio="3"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

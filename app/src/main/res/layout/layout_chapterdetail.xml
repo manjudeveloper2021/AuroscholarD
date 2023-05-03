@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5ssp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Features"
+                android:textSize="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black">
+            </androidx.appcompat.widget.AppCompatTextView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtdetail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:textColor="#595959">
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_2sdp"
+                app:cardCornerRadius="@dimen/_5sdp"
+                app:cardElevation="@dimen/_4sdp">
+
+         <LinearLayout
+             android:id="@+id/layout_video"
+             android:layout_width="match_parent"
+             android:orientation="vertical"
+             android:layout_height="wrap_content">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+             <RelativeLayout
+                 android:id="@+id/rel_video"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+                 <ImageView
+                     android:id="@+id/over_video"
+                     android:layout_width="@dimen/_14sdp"
+                     android:layout_height="@dimen/_14sdp"
+                     android:layout_marginLeft="@dimen/_10sdp"
+                     android:layout_marginTop="@dimen/_3ssp"
+                     android:layout_alignParentLeft="true"
+                     android:src="@drawable/video_icon"></ImageView>
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/head_txt"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_toRightOf="@id/over_video"
+                     android:textSize="@dimen/_10sdp"
+                     android:layout_marginTop="@dimen/_3ssp"
+                     android:textColor="#595959"
+                     android:layout_marginLeft="@dimen/_10sdp"
+                     android:text="Video Tutorials">
+                 </androidx.appcompat.widget.AppCompatTextView>
+                 <RelativeLayout
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/head_txt"
+                     android:layout_marginTop="@dimen/_5ssp"
+                     tools:ignore="WebViewLayout">
+                     <WebView
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_180sdp"
+                         android:id="@+id/video_view"></WebView>
+
+                 </RelativeLayout>
+
+             </RelativeLayout>
+
+
+
+
+
+
+             </RelativeLayout>
+
+         </LinearLayout>
+
+
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

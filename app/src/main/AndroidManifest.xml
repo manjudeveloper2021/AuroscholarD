@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.auro.application">
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-feature android:name="android.hardware.camera.any" android:required="true"></uses-feature>
+
+    <queries>
+        <intent>
+    <action android:name="android.media.action.IMAGE_CAPTURE"/>
+
+</intent>
+    <intent>
+    <action android:name="android.intent.action.OPEN_DOCUMENT_TREE"/>
+</intent>
+</queries>
+    <application
+        android:name=".core.application.AuroApp"
+        android:allowBackup="true"
+        android:fullBackupOnly="true"
+        android:backupInForeground="true"
+        android:preserveLegacyExternalStorage="true"
+        android:rollbackDataPolicy="restore"
+        android:restoreAnyVersion="true"
+        android:fullBackupContent="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+
+        <activity
+            android:name=".home.presentation.view.activity.SetPinActivity"
+            android:exported="true" />
+        <activity
+            android:name=".kyc.presentation.view.activity.KycActivity"
+            android:exported="true" />
+
+
+        <receiver
+            android:name=".util.network.NetworkChangeReceiver"
+            android:exported="true"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver> <!-- <activity -->
+        <activity
+            android:name=".home.presentation.view.activity.ResetPasswordActivity"
+            android:exported="true"
+            android:noHistory="false"
+            android:excludeFromRecents="false"/>
+
+        <activity
+            android:name=".ChatActivity"
+            android:exported="true"
+            android:noHistory="false"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:excludeFromRecents="false"/>
+        <activity
+            android:name=".home.presentation.view.activity.WebActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:label="@string/title_activity_web"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+
+        <activity
+            android:name=".home.presentation.view.activity.OtpScreenActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.presentation.view.activity.DashBoardMainActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.presentation.view.activity.HomeActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.ForgotPinActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".home.presentation.view.activity.StudentProfileActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".home.presentation.view.activity.PartnerListingActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".home.presentation.view.activity.PartnerWebviewActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".home.presentation.view.activity.EnterPinActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.presentation.view.activity.EnterStudentPinActivity"
+            android:exported="true"
+            android:excludeFromRecents="false"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".home.presentation.view.activity.SplashScreenAnimationActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+<!--            <intent-filter-->
+<!--                android:autoVerify="true"-->
+<!--                tools:targetApi="m">-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--                <data android:scheme="auroscholar" />-->
+<!--            </intent-filter>-->
+            <intent-filter>
+                <data
+                    android:host="open"
+                    android:scheme="open" />
+
+                <!-- by google firebase deeplink -->
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="amdroid.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+
+
+
+                <data
+                    android:host="n1a3c.test-app.link"
+                    android:scheme="https" />
+                <data
+                    android:host="n1a3c-alternate.test-app.link"
+                    android:scheme="https" />
+            </intent-filter>
+<!--            </intent-filter>-->
+<!--            <intent-filter>-->
+<!--                <data android:scheme="com.auro.application" android:host="open" />-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter android:autoVerify="true">-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--                <data android:scheme="https" android:host="com.auro.application" />-->
+
+<!--            </intent-filter>-->
+        </activity>
+
+<!--        <receiver-->
+<!--            android:name="io.branch.referral.InstallListener"-->
+<!--            android:exported="true"-->
+<!--            android:permission="android.permission.INSTALL_PACKAGES">-->
+
+<!--            <intent-filter>-->
+<!--                <action android:name="com.android.vending.INSTALL_REFERRER"/>-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+<!--        <meta-data-->
+<!--            android:name="io.branch.sdk.BranchKey.test"-->
+<!--            android:value="key_test_your branch test key" />-->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.truecaller.android.sdk.PartnerKey"
+            android:value="@string/partnerKey" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+
+        <service
+            android:name=".util.firebase.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".util.permission.PermissionsActivity"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait" />
+        <activity android:name=".home.presentation.view.activity.CameraActivity" android:theme="@style/AppTheme.NoActionBar" android:label="@string/title_activity_camera" android:exported="true" android:resizeableActivity="false" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".util.cropper.CropImagesActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".RealTimeFaceDetection.CameraxActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDjbnwn833et_t7M6D0vVP_LSOMz-IdHPQ" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+
+        <receiver
+            android:name=".util.otp_verification.SMSReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".home.presentation.view.activity.LoginActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".teacher.presentation.view.activity.TeacherLoginActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".home.presentation.view.activity.OtpActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".home.presentation.view.activity.ChooseGradeActivity" />
+        <activity
+            android:name=".home.presentation.view.activity.AppLanguageActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.presentation.view.activity.UserProfileActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.ParentProfileActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.ParentForgotPinActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.ChildAccountsActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".teacher.presentation.view.activity.TeacherProfileActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.ValidateStudentActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.EnterNumberActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.UpdateChildPinActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.CompleteStudentProfileWithPinActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.CompleteStudentProfileWithoutPin"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.SetParentPinActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+        <activity
+            android:name=".home.presentation.view.activity.EnterParentPinActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+<!--        <activity-->
+<!--            android:name="com.wuadam.awesomewebview.AwesomeWebViewActivity"-->
+<!--            android:exported="true"-->
+<!--            android:resizeableActivity="false"-->
+<!--            android:screenOrientation="portrait"-->
+<!--            android:theme="@style/FinestWebViewTheme" />-->
+        <activity
+            android:name=".home.presentation.view.fragment.SubjectPreferencesActivity"
+            android:configChanges="locale"
+            android:exported="true"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeNew" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <!-- Branch init -->
+<!--        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_ga9L00ErDQVBJ5WUKjoxaccpFFo5uzmN" />-->
+       <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_jf0R75AtAJGxQ60GJpaDfffgyyd6rDg0"/>
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="true" />     <!-- Set to true to use Branch_Test_Key (useful when simulating installs and/or switching between debug and production flavors) -->
+
+    </application>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+            <data android:mimeType="text/plain" />
+        </intent>
+    </queries>
+
+
+</manifest>

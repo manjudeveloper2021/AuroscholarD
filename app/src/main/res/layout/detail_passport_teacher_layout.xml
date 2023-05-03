@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <RelativeLayout
+    android:id="@+id/mainParentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <com.auro.application.core.util.uiwidget.RPTextView
+            android:id="@+id/tvStudentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:layout_gravity="left"
+            android:visibility="visible"
+            android:text="Subject Name"
+            app:Font="ArticulatCF-Medium.otf"/>
+
+        <com.auro.application.core.util.uiwidget.RPTextView
+            android:id="@+id/tvStudentScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ash_grey"
+            android:textSize="@dimen/_10sdp"
+            android:layout_gravity="left"
+            android:visibility="visible"
+            android:text="Quiz name"
+            app:Font="ArticulatCF-Medium.otf"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@color/auro_start_greay"
+            android:layout_below="@+id/mainLayout"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvScholarship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:text="Quiz Score"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvscholarshipvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/_110sdp"
+                android:text="50"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvquiz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:text="Quiz Status"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvquizvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_dark"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/_110sdp"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:text="Scholarship Amount"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvamountvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/_110sdp"
+                android:text="₹0"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_height="wrap_content">
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentStart="true"
+                android:visibility="visible"
+                android:text="Scholarship Status"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+            <com.auro.application.core.util.uiwidget.RPTextView
+                android:id="@+id/tvstatusvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_color"
+                android:textSize="@dimen/_10sdp"
+                android:layout_alignParentEnd="true"
+                android:visibility="visible"
+                android:layout_marginLeft="@dimen/_110sdp"
+                app:Font="ArticulatCF-Medium.otf"/>
+
+
+        </RelativeLayout>
+
+    <com.auro.application.core.util.uiwidget.RPTextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:text="@string/message"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        app:Font="ArticulatCF-Regular.otf"
+        android:background="@drawable/message_send_box"/>
+
+
+    </LinearLayout>
+    <View
+        android:id="@+id/viewlast"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@color/auro_start_greay"
+        android:layout_below="@+id/mainLayout"/>
+
+</RelativeLayout>
+
+</layout>

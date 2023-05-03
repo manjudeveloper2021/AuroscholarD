@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.auro.application.home.presentation.viewmodel.HomeViewDashBoardModel" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/parentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/downloadcert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5ssp"
+            android:gravity="right"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_5ssp"
+            android:layout_marginBottom="@dimen/_5ssp"
+            android:visibility="visible"
+            android:text="Download Certificate"
+            android:textColor="@color/blue_color">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/light_grey" />
+    </LinearLayout>
+
+
+</layout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/txtconfirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Are you sure ?"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+        <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_margin="5dp"
+           android:padding="10dp"
+           android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtconfirmdetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Do you really want to remove\n from your My Buddies list?"
+                android:textAlignment="center" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="160dp"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:background="@color/blue_color"
+        android:text="Cancel"
+        android:textColor="#FFF" />
+    <Button
+        android:id="@+id/buttondelete"
+
+        android:layout_width="160dp"
+        android:visibility="visible"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:background="@color/color_red"
+        android:text="Yes, Remove"
+        android:textColor="#FFF" />
+</LinearLayout>
+
+       </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

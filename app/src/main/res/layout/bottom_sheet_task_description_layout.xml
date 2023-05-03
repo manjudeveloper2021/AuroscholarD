@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/student_round_bottom"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/View"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/corder_student_list" />
+
+            <RelativeLayout
+                android:id="@+id/layout_steps"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/View"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical">
+
+
+
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:id="@+id/tvdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="Task Description"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="visible"
+                    app:Font="ArticulatCF-Medium.otf" />
+
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:id="@+id/tvdesc_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry.. Lorem Ipsum is simply dummy text of the printing and typesetting industry..Lorem Ipsum is simply dummy text of the printing and typesetting industry..Lorem Ipsum is simply dummy text of the printing and typesetting industry.."
+                    android:textColor="@color/auro_grey_new"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:layout_below="@+id/tvdesc"
+                    android:visibility="visible"
+                    app:Font="ArticulatCF-Medium.otf" />
+
+                <com.auro.application.core.util.uiwidget.RPTextView
+                    android:id="@+id/buttonSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Task"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:textColor="@color/white"
+               android:layout_below="@+id/tvdesc_value"
+                    app:Font="ArticulatCF-Regular.otf"
+                    android:gravity="center"
+                    android:background="@drawable/task_btn"/>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-100dp"
+                android:src="@drawable/ic_bottom_animation" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

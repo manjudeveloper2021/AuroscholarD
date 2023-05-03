@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+            android:id="@+id/layout_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="@dimen/_4sdp">
+
+
+        <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_12sdp"
+                    android:background="@drawable/course_bgimg"
+                    android:orientation="vertical"
+
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="@+id/imageView5">
+
+         <RelativeLayout
+             android:id="@+id/rel_head"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+             <ImageView
+                 android:id="@+id/module_img"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_marginLeft="-10dp"
+                 android:src="@drawable/courseimg"></ImageView>
+             <androidx.appcompat.widget.AppCompatTextView
+                 android:id="@+id/head_txt"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="@dimen/_12sdp"
+                 android:textColor="@color/black"
+                 android:layout_below="@id/module_img"
+                 android:fontFamily="@font/poppins_medium"
+                 android:text="Course name">
+             </androidx.appcompat.widget.AppCompatTextView>
+             <RelativeLayout
+                 android:layout_alignParentRight="true"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="@dimen/_12sdp"
+                 android:orientation="horizontal">
+                 <RelativeLayout
+                     android:id="@+id/relstatus"
+                     android:layout_alignParentRight="true"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+
+                     android:orientation="horizontal">
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/txtstatus"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:fontFamily="@font/poppins_medium"
+                     android:textSize="@dimen/_12sdp"></androidx.appcompat.widget.AppCompatTextView>
+                 <ImageView
+                     android:id="@+id/imgnext"
+                     android:layout_toRightOf="@+id/txtstatus"
+                     android:layout_width="wrap_content"
+                     android:visibility="gone"
+                     android:layout_marginRight="@dimen/_8ssp"
+                     android:layout_marginLeft="@dimen/_8ssp"
+                     android:layout_height="wrap_content"
+                     android:layout_centerVertical="true"
+                     android:src="@drawable/next_arrow"></ImageView>
+                 </RelativeLayout>
+                 <androidx.appcompat.widget.AppCompatTextView
+                     android:id="@+id/txtpercent"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_toLeftOf="@+id/relstatus"
+                     android:textColor="@color/black"
+                     android:fontFamily="@font/poppins_medium"
+                     android:layout_marginRight="@dimen/_46ssp"
+                     />
+                 <RelativeLayout
+                     android:id="@+id/rel_progress"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_below="@+id/relstatus"
+                     android:visibility="gone"
+                     android:layout_alignParentRight="true">
+
+
+                 <ProgressBar
+                     android:layout_width="@dimen/_130sdp"
+                     android:id="@+id/progressbarPredict"
+
+                     android:layout_marginTop="@dimen/_5ssp"
+                     android:layout_height="@dimen/_2ssp"
+                     android:background="@color/progress_bg"
+                     style="?android:attr/progressBarStyleHorizontal"/>
+                 </RelativeLayout>
+
+             </RelativeLayout>
+         </RelativeLayout>
+
+
+             <RelativeLayout
+                android:layout_marginTop="@dimen/_10ssp"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+                 <LinearLayout
+                     android:id="@+id/rel_module"
+                     android:layout_alignParentLeft="true"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:orientation="horizontal">
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/txtmodule"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="05 Modules"
+                         android:textColor="#929191"
+                         android:fontFamily="@font/poppins_regular"
+                         android:layout_marginTop="@dimen/_1sdp"
+                         android:textSize="@dimen/_12sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+                 </LinearLayout>
+
+                 <View
+                     android:id="@+id/view"
+                     android:layout_centerVertical="true"
+                     android:layout_marginLeft="@dimen/_8ssp"
+                     android:layout_toRightOf="@+id/rel_module"
+                     android:layout_width="@dimen/_1ssp"
+                     android:layout_height="@dimen/_12ssp"
+                     android:background="@color/auro_start_greay"></View>
+                 <LinearLayout
+                   android:layout_toRightOf="@+id/view"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="@dimen/_8sdp"
+
+                     android:orientation="horizontal">
+                     <ImageView
+                         android:layout_width="@dimen/_14sdp"
+                         android:layout_height="@dimen/_14sdp"
+                         android:layout_marginTop="@dimen/_2ssp"
+                         android:src="@drawable/module_time"></ImageView>
+                     <androidx.appcompat.widget.AppCompatTextView
+                         android:id="@+id/txttime"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="12 Min"
+                         android:fontFamily="@font/poppins_regular"
+                         android:textColor="#929191"
+                         android:layout_marginLeft="@dimen/_2ssp"
+                         android:layout_marginTop="@dimen/_1sdp"
+                         android:textSize="@dimen/_12sdp"></androidx.appcompat.widget.AppCompatTextView>
+
+                 </LinearLayout>
+             </RelativeLayout>
+
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+<!--            </androidx.cardview.widget.CardView>-->
+        </LinearLayout>
+
+</layout>

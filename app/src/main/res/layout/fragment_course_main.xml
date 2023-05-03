@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   >
+                    <RelativeLayout
+                        android:id="@+id/relative_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_120sdp"
+                        android:background="@drawable/headertop">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:src="@drawable/left_corner"
+                            app:tint="@color/white"></ImageView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:src="@drawable/auro_logo"></ImageView>
+                        <ImageView
+                            android:id="@+id/imgnext"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_alignParentStart="true"
+                            android:layout_gravity="right"
+                            android:layout_marginStart="@dimen/_10sdp"
+
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:src="@drawable/ic_back"
+                            app:tint="@color/white" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="-22dp"
+                        android:layout_below="@+id/relative_top"
+                        android:background="@drawable/course_round_bg">
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+                            <TextView
+                                android:id="@+id/txttitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:text="List of Courses"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"></TextView>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_module"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txttitle"
+                                android:layout_marginTop="@dimen/_10sdp"></androidx.recyclerview.widget.RecyclerView>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/rel_certificate"
+                            android:layout_below="@+id/relative_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginStart="@dimen/_10sdp"
+
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txthead"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:text="Certificates"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:textColor="@color/black"
+                                android:textSize="18dp"
+                                android:textStyle="bold"></androidx.appcompat.widget.AppCompatTextView>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                               android:id="@+id/txt_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No certificate achieved yet"
+                                android:textColor="@color/cer_color"
+                                android:textSize="@dimen/_14sdp"
+                                android:visibility="gone"
+                                android:layout_centerInParent="true"
+                                android:layout_margin="@dimen/_20sdp"
+                                android:layout_below="@+id/txthead"></androidx.appcompat.widget.AppCompatTextView>
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycler_certificate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/txthead"
+                                android:layout_marginTop="@dimen/_10sdp"></androidx.recyclerview.widget.RecyclerView>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:padding="@dimen/_20sdp"
+                        android:visibility="gone"
+                        android:background="@drawable/gradient_module_bg">
+<androidx.appcompat.widget.AppCompatTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Click to start Module 2\n Lorem ipsum"
+    android:textColor="@color/white"
+    android:textSize="@dimen/_14ssp"></androidx.appcompat.widget.AppCompatTextView>
+                  <Button
+                      android:layout_width="@dimen/_100sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Module 2"
+                      android:textAllCaps="false"
+                      android:textColor="@color/white"
+                      android:textSize="@dimen/_14sdp"
+                      android:padding="@dimen/_5ssp"
+                      android:background="#2AB6FE"
+                      android:layout_alignParentRight="true"></Button>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/errorConstraint"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include
+
+                android:id="@+id/errorLayout"
+                layout="@layout/error_layout" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="@dimen/_2sdp"
+            android:indeterminateDrawable="@drawable/circular_progress"
+            android:innerRadiusRatio="3"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

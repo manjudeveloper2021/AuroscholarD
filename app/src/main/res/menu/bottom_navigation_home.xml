@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_dashboard"
+        android:enabled="true"
+        android:icon="@drawable/home_ic"
+        android:title="Home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_info"
+        android:enabled="true"
+        android:icon="@drawable/classroom_ic"
+        android:title="Classroom"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_teacherbuddy"
+        android:enabled="true"
+        android:icon="@drawable/buddy_ic"
+        android:title="Buddy"
+        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/action_profile"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_profile"-->
+<!--        android:title="Profile"-->
+<!--        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/action_kyc"
+        android:enabled="true"
+        android:icon="@drawable/ic_kyc_nav"
+        android:title="Kyc"
+        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/action_studentpassport"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_passport_ds"-->
+<!--        android:title="Passport"-->
+<!--        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/action_more"
+        android:enabled="true"
+        android:icon="@drawable/more_ic"
+        android:title="More"
+        app:showAsAction="ifRoom" />
+
+</menu>

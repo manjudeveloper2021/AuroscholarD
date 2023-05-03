@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".teacher.presentation.view.fragment.InformationDashboardFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:ignore="MissingConstraints">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mainParentLayoutInvite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:context=".home.presentation.view.fragment.MainQuizHomeFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constantLayoutInvite"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relative_buddy_invite"
+                    android:gravity="center"
+                    android:padding="@dimen/_20sdp"
+                    tools:ignore="MissingConstraints">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtbuddyinvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="Teacher Buddies"
+                        android:textSize="@dimen/_14ssp"
+                        android:textColor="@color/auro_black"
+                        android:fontFamily="@font/roboto_medium">
+                    </androidx.appcompat.widget.AppCompatTextView>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgbuddy"
+                        android:layout_width="@dimen/_28ssp"
+                        android:layout_height="@dimen/_28ssp"
+                        android:layout_marginRight="@dimen/_6sdp"
+                        android:src="@drawable/recbuddy"
+                        android:layout_alignParentEnd="true">
+                    </androidx.appcompat.widget.AppCompatImageView>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/txtcountpending"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:visibility="gone"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:background="@drawable/background_btn_blue_round"
+                        android:layout_alignParentBottom="@+id/imgbuddy">
+                    </androidx.appcompat.widget.AppCompatImageView>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtbuddyaddinvite"
+                        android:layout_below="@id/txtbuddyinvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Buddies Added Yet!"
+                        android:textSize="@dimen/_12ssp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:textColor="@color/auro_black"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium">
+                    </androidx.appcompat.widget.AppCompatTextView>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgaddbuddy"
+                        android:layout_width="@dimen/_250sdp"
+                        android:layout_below="@id/txtbuddyaddinvite"
+                        android:layout_height="@dimen/_250sdp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/group_buddy">
+                    </androidx.appcompat.widget.AppCompatImageView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtbuddysloganinvite"
+                        android:layout_below="@id/imgaddbuddy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Now you can add those buddies who\n are already users of Auroscholar App."
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:textColor="@color/auro_black"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/roboto_medium">
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnaddbuddyinvite"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/txtbuddysloganinvite"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btn_invite"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_16sdp"
+                        android:text="Add Buddies">
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtbuddylink"
+                        android:layout_below="@id/btnaddbuddyinvite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Add buddies via link sharing"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:textColor="@color/auro_black"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/calibre_light">
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnshare"
+                        android:layout_width="match_parent"
+                        android:layout_below="@id/txtbuddylink"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/btnshare"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_16sdp"
+                        android:text="Share">
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                </RelativeLayout>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mainParentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="gone"
+            tools:context=".home.presentation.view.fragment.MainQuizHomeFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constantLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/relative_buddy"
+    android:gravity="center"
+    android:padding="@dimen/_14sdp"
+    tools:ignore="MissingConstraints">
+
+ <androidx.appcompat.widget.AppCompatTextView
+     android:id="@+id/txtbuddy"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_centerHorizontal="true"
+     android:text="Add Buddies"
+     android:textSize="@dimen/_14ssp"
+     android:textColor="@color/auro_black"
+     android:fontFamily="@font/roboto_medium">
+ </androidx.appcompat.widget.AppCompatTextView>
+    <EditText
+        android:id="@+id/txtbuddyadd"
+        android:layout_below="@id/txtbuddy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_6sdp"
+        android:background="@drawable/border_selector_exit"
+        android:hint="Search Auro Teacher"
+        android:textSize="@dimen/_12ssp"
+        android:visibility="gone"
+        android:drawableLeft="@drawable/places_ic_search"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/grey"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_medium">
+    </EditText>
+
+<RelativeLayout
+    android:id="@+id/rel_selectbuddy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/txtbuddyadd">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtbuddyslogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12ssp"
+        android:text="Auro Teacher"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/auro_black"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_medium">
+    </androidx.appcompat.widget.AppCompatTextView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtselectall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12ssp"
+        android:text="Select All"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/blue_color"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_medium">
+    </androidx.appcompat.widget.AppCompatTextView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtrefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_12ssp"
+        android:text="Refresh"
+        android:visibility="visible"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:textColor="@color/blue_color"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_medium">
+    </androidx.appcompat.widget.AppCompatTextView>
+</RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/rel_selectbuddy"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerviewbuddylist">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnaddbuddy"
+        android:layout_width="match_parent"
+        android:layout_below="@id/recyclerviewbuddylist"
+        android:layout_height="@dimen/_40sdp"
+
+
+        android:background="@drawable/btn_invite"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14sdp"
+        android:text="Send Invitation">
+
+    </androidx.appcompat.widget.AppCompatButton>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnsharebuddy"
+        android:layout_width="match_parent"
+        android:layout_below="@id/btnaddbuddy"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/btnshare"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_14sdp"
+        android:text="Share">
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+
+
+
+</RelativeLayout>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+
+        <include
+
+            android:id="@+id/progressbar"
+            layout="@layout/full_screen_progress_bar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+</RelativeLayout>
+</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+
