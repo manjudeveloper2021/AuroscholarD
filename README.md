@@ -6,6 +6,8 @@ When you're done, you can delete the content in this README and update the file 
 
 ---
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/771db7206f9a4db49bf61330036eb32c)](https://app.codacy.com/gh/manjudeveloper2021/AuroscholarD?utm_source=github.com&utm_medium=referral&utm_content=manjudeveloper2021/AuroscholarD&utm_campaign=Badge_Grade)
+
 ## Edit a file
 
 You’ll start by editing this README file to learn how to edit a file in Bitbucket.
